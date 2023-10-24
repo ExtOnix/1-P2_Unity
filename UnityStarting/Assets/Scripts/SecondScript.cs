@@ -6,11 +6,13 @@ public class SecondScript : MonoBehaviour
 {
     [SerializeField] FirstScript firstScript = null;
     [SerializeField] FirstScript instance = null;
+    [SerializeField] GameObject myObject = null;
 
     private void Start() => Init();
     void Init()
     {
         Debug.Log($"FROM {name} TO {firstScript?.name} => COUCOU => {firstScript?.Value}");
         instance = gameObject.AddComponent<FirstScript>();
+        myObject = new GameObject();
     }
 }
