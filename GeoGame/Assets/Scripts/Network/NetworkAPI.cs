@@ -9,17 +9,17 @@ using Unity.VisualScripting;
 
 public class NetworkAPI : MonoBehaviour
 {
-    public static  event Action<Questions[]> OnQuestion = null;
+    public static  event Action<Quizz> OnQuizz = null;
 
     void Start()
     {
-        MainUI.OnPlayButton += () => Init("tv_cinema", "facile");
+        MainUI.OnPlayButton += () => StartCoroutine(Init("tv_cinema", "facile"));
+        GameUI.OnWon += () => StartCoroutine(Init("tv_cinema", "facile"));
         Debug.Log("Test");
     }
 
-    IEnumerator Init(string _category, string _difficulty)
+    public IEnumerator Init(string _category, string _difficulty)
     {
-        Debug.Log("Test2");
         yield return StartCoroutine(GetQuestions(_category,_difficulty));
     }
     IEnumerator GetQuestions(string _category, string _difficulty)
@@ -30,9 +30,8 @@ public class NetworkAPI : MonoBehaviour
             Debug.LogError("DOWNLOAD FAILED");
         else
         {
-            Questions[] _questions = JsonConvert.DeserializeObject<Questions[]>(_request.downloadHandler.text);
-            Debug.Log(_questions.ToString());
-            OnQuestion?.Invoke(_questions);
+            Quizz _questions = JsonConvert.DeserializeObject<Quizz>(_request.downloadHandler.text);
+            OnQuizz?.Invoke(_questions);
         }
 
     }

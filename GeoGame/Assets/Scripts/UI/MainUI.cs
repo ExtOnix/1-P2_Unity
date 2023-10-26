@@ -2,15 +2,18 @@ using System.Collections;
 using System;
 using UnityEngine;
 using UnityEngine.UI;
+using System.Collections.Generic;
 
 public class MainUI : MonoBehaviour
 {
     public static  event Action OnPlayButton = null, OnQuitButton = null, OnMenuButton = null;
+
     [SerializeField] Button playButton = null;
     [SerializeField] Button quitButton = null;
     [SerializeField] Button menuButton = null;
     [SerializeField] GameObject gamePage = null;
     [SerializeField] GameObject mainPage = null;
+    [SerializeField] Dropdown category = null;
 
     public bool IsValidUI => playButton && quitButton;
 
@@ -64,5 +67,10 @@ public class MainUI : MonoBehaviour
     public void HidePage(GameObject _page)
     {
         _page?.SetActive(false);
+    }
+
+    public void ChooseCategory()
+    {
+        
     }
 }
