@@ -6,6 +6,7 @@ public class Quizz
 }
 public class Questions
 {
+    #region f/p
     public static bool RandomDone { get; set; } = false;
     int index = 0;
     public string Question { get; set; }
@@ -18,8 +19,10 @@ public class Questions
     {
         get => MixAnswers(Answer);
     }
+    #endregion
 
-    #region lol
+    #region methods
+    #region test
     //public string[] MixAnswers(string goodAnswer)
     //{
     //    Random random = new Random();
@@ -61,4 +64,5 @@ public class Questions
         answerArray[BadAnswers.Length] = _temp;
         return answerArray;
     }
+    #endregion
 }

@@ -11,13 +11,20 @@ public class NetworkAPI : MonoBehaviour
 {
     public static  event Action<Quizz> OnQuizz = null;
 
+    #region f/p
+    public static string category = "tv_cinema";
+    public static string difficulty = "facile";
+    #endregion
+
+    #region Unity
     void Start()
     {
-        MainUI.OnPlayButton += () => StartCoroutine(Init("tv_cinema", "facile"));
-        GameUI.OnWon += () => StartCoroutine(Init("tv_cinema", "facile"));
-        Debug.Log("Test");
+        MainUI.OnPlayButton += () => StartCoroutine(Init(category, difficulty));
+        GameUI.OnWon += () => StartCoroutine(Init(category, difficulty));
     }
+    #endregion
 
+    #region Methods
     public IEnumerator Init(string _category, string _difficulty)
     {
         yield return StartCoroutine(GetQuestions(_category,_difficulty));
@@ -35,4 +42,5 @@ public class NetworkAPI : MonoBehaviour
         }
 
     }
+    #endregion
 }

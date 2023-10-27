@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 67bcd5a7d8dd3e9498cd7ab11a1f2217
+guid: 353d5f8291e872a419039a94962b0143
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -110,13 +110,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: bouton-web_0
+      name: wrong_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 194
-        width: 512
-        height: 124
+        x: 107
+        y: 105
+        width: 300
+        height: 300
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -124,8 +124,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f59d0e207c500b544ad69757c93b32a3
-      internalID: 39811900
+      spriteID: 6f4853428644e864eb8a66a7ff690e89
+      internalID: 1308680671
       vertices: []
       indices: 
       edges: []
@@ -141,7 +141,7 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      bouton-web_0: 39811900
+      wrong_0: 1308680671
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
