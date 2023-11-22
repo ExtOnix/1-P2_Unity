@@ -21,6 +21,7 @@ public class NetworkAPI : MonoBehaviour
     {
         MainUI.OnPlayButton += () => StartCoroutine(Init(category, difficulty));
         GameUI.OnWon += () => StartCoroutine(Init(category, difficulty));
+        GameUI.OnRenewQuestion += () => StartCoroutine(Init(category, difficulty));
     }
     #endregion
 

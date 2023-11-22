@@ -101,6 +101,9 @@ public class MainUI : MonoBehaviour
             case 5:
                 NetworkAPI.category = DropdownUtils.SPORT;
                 break;
+            case 6:
+                NetworkAPI.category = DropdownUtils.RANDOM_CAT;
+                break;
             default:
                 break;
         }
@@ -118,6 +121,9 @@ public class MainUI : MonoBehaviour
                 break;
             case 2:
                 NetworkAPI.difficulty = DropdownUtils.HARD;
+                break;
+            case 3:
+                NetworkAPI.difficulty = DropdownUtils.RANDOM_DIFFICULTY;
                 break;
             default:
                 break;

@@ -1,5 +1,7 @@
 
 
+using Unity.VisualScripting;
+
 public class Quizz
 {
     public Questions[] Quizzes { get; set; }
@@ -8,6 +10,7 @@ public class Questions
 {
     #region f/p
     public static bool RandomDone { get; set; } = false;
+    public int _ID { get; set; } = 0;
     int index = 0;
     public string Question { get; set; }
     public string Answer { get; set; }
